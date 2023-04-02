@@ -16,17 +16,21 @@
            fetch="https://gitlab.com/Havoc-GApps"
            revision="eleven" />
 
+  <remote  name="cykeek"
+           fetch="https://github.com/Cykeek"
+           revision="eleven" />
+
   <!-- General -->
   <project path="art" name="android_art" remote="havoc" />
   <project path="bionic" name="android_bionic" remote="havoc" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="havoc" />
   <project path="development" name="android_development" remote="havoc" />
   <project path="libcore" name="android_libcore" remote="havoc" />
-  <project path="manifest" name="android_manifest" remote="havoc" />
+  <project path="manifest" name="havoc_manifest" remote="cykeek" />
 
   <!-- Build -->
   <project path="build/blueprint" name="android_build_blueprint" remote="havoc" />
-  <project path="build/make" name="android_build" remote="havoc">
+  <project path="build/make" name="havoc_build" remote="cykeek">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -69,12 +73,12 @@
   <project path="external/tremolo" name="android_external_tremolo" remote="havoc" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="android_frameworks_av" remote="havoc" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="havoc" />
+  <project path="frameworks/av" name="havoc_frameworks_av" remote="cykeek" />
+  <project path="frameworks/base" name="havoc_frameworks_base" remote="cykeek" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="havoc" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="havoc" />
+  <project path="frameworks/native" name="havoc_frameworks_native" remote="cykeek" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="havoc" />
-  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="havoc" />
+  <project path="frameworks/opt/net/wifi" name="havoc_frameworks_opt_net_wifi" remote="cykeek" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="havoc" />
   <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="havoc" />
 
@@ -112,10 +116,10 @@
   <project path="packages/apps/ManagedProvisioning" name="android_packages_apps_ManagedProvisioning" remote="havoc" />
   <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="havoc" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="havoc" />
-  <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="havoc" />
+  <project path="packages/apps/PermissionController" name="havoc_packages_apps_PackageInstaller" remote="cykeek" />
   <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="havoc" />
   <project path="packages/apps/SecureElement" name="android_packages_apps_SecureElement" remote="havoc" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="havoc" />
+  <project path="packages/apps/Settings" name="havoc_packages_apps_Settings" remote="cykeek" />
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="havoc" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="havoc" />
   <project path="packages/apps/SoftAPManager" name="android_packages_apps_SoftAPManager" remote="havoc" />
@@ -130,8 +134,8 @@
   <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="havoc" />
   <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="havoc" />
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="havoc" />
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="havoc" />
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="havoc" />
+  <project path="packages/providers/TelephonyProvider" name="havoc_packages_providers_TelephonyProvider" remote="cykeek" />
+  <project path="packages/services/Telecomm" name="havoc_packages_services_Telecomm" remote="cykeek" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="havoc" />
 
   <!-- Prebuilts -->
@@ -170,7 +174,7 @@
   <!-- Vendor -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="havoc" />
   <project path="vendor/gapps" name="android_vendor_gapps" remote="havoc-gitlab" />
-  <project path="vendor/havoc" name="android_vendor_havoc" remote="havoc" />
+  <project path="vendor/havoc" name="vendor_havoc" remote="cykeek" />
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="havoc" />
   <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="havoc" />
   <project path="vendor/support" name="android_vendor_support" remote="havoc" />
